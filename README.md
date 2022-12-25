@@ -1,4 +1,3 @@
-"# SQLServer_C-_CrudAPP" 
 # Manajemen Basis Data
 ## Implementasi CRUD Microsoft SQL Server dengan C#
 Link Video Persentasi => https://youtu.be/qA0pt2uLFt0
@@ -38,3 +37,6 @@ git clone https://github.com/furqonfadlillah7/SQLServer_C-_CrudAPP.git
 
 > 4. Search / Read
  Select * from TableMhs where NIM=@NIM 
+
+### Screenshoot Form 
+<img width="409" alt="image" src="https://user-images.githubusercontent.com/78301902/209471732-3cb9cc83-a462-48b1-85bf-dfbddbf024d4.png">
