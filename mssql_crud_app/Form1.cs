@@ -26,12 +26,26 @@ namespace mssql_crud_app
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-COGENAIJ\\SQLEXPRESS;Initial Catalog=MhsDB;Integrated Security=True;Pooling=False");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Update TableMhs set Nama=@Nama, Jurusan=@Jurusan where NIM=@NIM", con);
+            cmd.Parameters.AddWithValue("@NIM", int.Parse(textBox1.Text));
+            cmd.Parameters.AddWithValue("@Nama", textBox2.Text);
+            cmd.Parameters.AddWithValue("@Jurusan", textBox3.Text);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+            MessageBox.Show("Update Data Berhasil");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-COGENAIJ\\SQLEXPRESS;Initial Catalog=MhsDB;Integrated Security=True;Pooling=False");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Delete TableMhs where NIM=@NIM", con);
+            cmd.Parameters.AddWithValue("@NIM", int.Parse(textBox1.Text));
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Hapus Data Berhasil");
         }
 
         private void button4_Click(object sender, EventArgs e)
